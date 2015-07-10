@@ -1,0 +1,39 @@
+{
+  "name": "vlux",
+  "version": "0.1.0",
+  "description": "Simple flux implementation.",
+  "main": "dist/vlux.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vacuumlabs/vlux.git"
+  },
+  "keywords": [
+    "flux",
+    "javascript",
+    "react"
+  ],
+  "author": "VacuumLabs",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/vacuumlabs/vlux/issues"
+  },
+  "homepage": "https://github.com/vacuumlabs/vlux#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-eslint": "^3.1.9",
+    "babel-jest": "^5.2.0",
+    "eslint": "^0.21.2",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-eslint": "^0.12.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "jest-cli": "^0.4.5",
+    "run-sequence": "^1.1.0"
+  }
+}

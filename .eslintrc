@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "no-undef": 0,
+    "no-underscore-dangle": 0,
+    "curly": [2, "multi-line"],
+    "space-infix-ops": 0
+  },
+  "plugins": [
+  ],
+  "ecmaFeatures": {
+    "modules" : true
+  }
+}
