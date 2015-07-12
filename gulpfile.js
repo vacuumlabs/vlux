@@ -3,10 +3,7 @@
 
 var gulp = require("gulp");
 var sourcemaps = require("gulp-sourcemaps");
-var babelify = require("babelify").configure({
-  stage: 0
-});
-var browserify = require("browserify");
+var babel = require("gulp-babel");
 var source = require("vinyl-source-stream");
 var buffer = require("vinyl-buffer");
 var jest = require("jest-cli");
@@ -14,17 +11,10 @@ var eslint = require("gulp-eslint");
 var runSequence = require("run-sequence");
 
 gulp.task("build", function() {
-  var b = browserify({
-    entries: "src/vlux.js",
-    debug: true
-  });
-  return b
-    .transform(babelify)
-    .bundle()
-    .pipe(source("vlux.js"))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(sourcemaps.write('./'))
+  return gulp.src("src/**/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(babel({stage: 0}))
+    .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("dist"));
 });
 
