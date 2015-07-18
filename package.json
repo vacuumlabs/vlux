@@ -21,23 +21,20 @@
     "url": "https://github.com/vacuumlabs/vlux/issues"
   },
   "homepage": "https://github.com/vacuumlabs/vlux#readme",
-  "dependencies": {},
+  "dependencies": {
+    "eventemitter3": "^1.1.1"
+  },
   "devDependencies": {
     "babel": "^5.4.7",
     "babel-eslint": "^3.1.9",
     "babel-jest": "^5.2.0",
-    "babelify": "^6.1.2",
-    "browserify": "^10.2.6",
     "eslint": "^0.21.2",
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-concat": "^2.5.2",
     "gulp-eslint": "^0.12.0",
     "gulp-sourcemaps": "^1.5.2",
+    "harmonize": "^1.4.4",
     "jest-cli": "^0.4.5",
-    "run-sequence": "^1.1.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "run-sequence": "^1.1.0"
   }
 }
