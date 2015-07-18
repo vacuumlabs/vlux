@@ -1,6 +1,6 @@
 {
   "name": "vlux",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple flux implementation.",
   "main": "dist/vlux.js",
   "scripts": {
