@@ -1,25 +1,30 @@
-const isDev = 'production' !== process.env.NODE_ENV;
+import EventEmitter from 'eventemitter3';
 
-export class Dispatcher {
-  constructor(store) {
+function partition(n, list) {
+  let result = [];
+  for (let i = 0; i < list.length; i+=n) {
+    result.push(list.slice(i, i+n));
+  }
+  return result;
+}
+
+export class Dispatcher extends EventEmitter {
+  constructor(store, state) {
+    super();
     this.store = store;
-    this.state = store();
+    this.state = store(state);
   }
 
-  dispatch(action) {
-    if (typeof action === 'function') {
-      action(::this.dispatch, this.state);
-    } else if (typeof action === 'undefined') {
-      return;
-    } else {
-      if (isDev) console.log(action);
-      this.state = this.store(this.state, action);
-      this.onChange && this.onChange(this.state);
-    }
+  dispatch(...actions) {
+    this.state = partition(2, actions).reduce(
+        (state, [action, payload]) => this.store(state, action, payload),
+        this.state);
+
+    this.emit('change', this.state);
   }
 
   load(state) {
     this.state = this.store(state);
-    this.onChange && this.onChange(this.state);
+    this.emit('change', this.state);
   }
 }
