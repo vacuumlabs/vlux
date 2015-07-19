@@ -40,7 +40,7 @@ describe('dispatcher', () => {
     dispatcher.on('change', onChange);
     dispatcher.dispatch('inc', 10, 'unknown', 2, 'dec', 5, 'inc');
 
-    
+ 
     expect(onChange.mock.calls.length).toEqual(1);
     expect(onChange).toBeCalledWith(6);
     expect(dispatcher.state).toEqual(6);
