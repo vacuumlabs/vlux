@@ -5,7 +5,9 @@
     "no-underscore-dangle": 0,
     "curly": [2, "multi-line"],
     "space-infix-ops": 0,
-    "quotes": [1, "single", "avoid-escape"]
+    "quotes": [1, "single", "avoid-escape"],
+    "new-cap": 0,
+    "no-shadow": 0
   },
   "plugins": [
   ],
