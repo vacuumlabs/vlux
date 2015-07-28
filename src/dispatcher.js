@@ -15,7 +15,7 @@ export class Dispatcher extends EventEmitter {
     this.state = store(state);
   }
 
-  dispatch(...actions) {
+  dispatch = (...actions) => {
     this.state = partition(2, actions).reduce(
         (state, [action, payload]) => this.store(state, action, payload),
         this.state);

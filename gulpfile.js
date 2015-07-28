@@ -7,6 +7,8 @@ var babel = require('gulp-babel');
 var jest = require('jest-cli');
 var eslint = require('gulp-eslint');
 var runSequence = require('run-sequence');
+var makeWebpackConfig = require('./example/webpack/makeconfig');
+var webpackDevServer = require('./example/webpack/devserver');
 
 require('harmonize')();
 
@@ -50,5 +52,7 @@ gulp.task('test', function(done) {
   // Gulp deps aren't helpful, because we want to run tasks without deps as well.
   runSequence('eslint', 'jest', done);
 });
+
+gulp.task('run-example', webpackDevServer(makeWebpackConfig(true)));
 
 gulp.task('default', ['build']);
