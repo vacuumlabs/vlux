@@ -1,4 +1,3 @@
-import React from 'react';
 import {is, List, Map} from 'immutable';
 
 function get(coll, name, notFound) {
@@ -10,7 +9,7 @@ function get(coll, name, notFound) {
 
 export const STATE_KEY = '@@state';
 
-export class Component extends React.Component {
+export class Component {
 
   get __state() {return this.props[STATE_KEY]; }
   get state() {return this.__state && this.__state.get('state'); }
