@@ -1,3 +1,3 @@
-export * from './dispatcher';
-export * from './state';
-export * from './flux_set_state';
+export {Dispatcher} from './dispatcher';
+export {Component, STATE_KEY, bindState} from './state';
+export {setStateStore, createFluxSetState} from './flux_set_state';
