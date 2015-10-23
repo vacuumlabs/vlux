@@ -1,4 +1,5 @@
 import {is, List, Map} from 'immutable';
+import React from 'react'
 
 function get(coll, name, notFound) {
   if (typeof coll === 'undefined' || coll === null) return notFound;
@@ -9,7 +10,7 @@ function get(coll, name, notFound) {
 
 export const STATE_KEY = '@@state';
 
-export class Component {
+export class Component extends React.Component {
 
   get __state() {return this.props[STATE_KEY]; }
   get state() {return this.__state && this.__state.get('state'); }

@@ -1,6 +1,6 @@
 {
   "name": "vlux",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Simple flux implementation.",
   "main": "dist/vlux.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "dependencies": {
     "eventemitter3": "^1.1.1",
     "immutable": "^3.7.4",
-    "react": "^0.13.3"
+    "react": "0.13.3 - 0.14.0"
   },
   "devDependencies": {
     "babel": "^5.4.7",
